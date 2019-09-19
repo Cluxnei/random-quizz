@@ -12,9 +12,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            UsersTableSeeder::class,
             CategoriesTableSeeder::class,
-            QuestionsTableSeeder::class,
-            AnswersTableSeeder::class
+            QuestionsTableSeeder::class
         ]);
     }
 }
