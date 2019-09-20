@@ -2,7 +2,8 @@
 
 @section('content')
     <div class="container">
-
+        <strong>{{ (string) $userScore ?: '0' }} correta(s) / {{ $questionsToWin }} para ganhar</strong>
+        <hr>
         <h1>{{ $question->title }}</h1>
         <small>Categoria(s): {{ $question->commaCategories }}</small>
         <p>{{ $question->description }}</p>

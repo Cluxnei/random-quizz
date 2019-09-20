@@ -20,8 +20,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-   
+    <div id="loader" style="display: none;">
+        @include('components.loader')
+    </div>
     @yield('content')
-   
+
 </body>
 </html>
