@@ -24,3 +24,5 @@ Route::post('/user', 'UserController@store')->name('user.store');
 Route::post('/increment-score', 'UserController@increment')->name('score.increment');
 
 Route::post('/check-win', 'UserController@checkWin')->name('check.win');
+
+Route::get('/ranking', 'RankingController@index')->name('ranking');

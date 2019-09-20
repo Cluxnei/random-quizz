@@ -20,10 +20,10 @@ $(() => {
         })
     }
 
-    $('#random-question').click(function(event){
+    $('#random-question').submit(function(event){
         event.preventDefault()
         if(checkUsername())
-            registerUsername(this.href)
+            registerUsername(this.action)
         else
             displayError()
     })

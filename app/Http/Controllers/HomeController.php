@@ -19,6 +19,12 @@ class HomeController extends Controller
 
     public function success()
     {
-        return view('success');
+        if(session()->has('winner') && session()->get('winner') == true){
+            session(['winner' => false]);
+            return view('success');
+        }
+        else{
+            return redirect()->route('random.question');
+        }
     }
 }

@@ -39854,9 +39854,9 @@ $(function () {
     });
   }
 
-  $('#random-question').click(function (event) {
+  $('#random-question').submit(function (event) {
     event.preventDefault();
-    if (checkUsername()) registerUsername(this.href);else displayError();
+    if (checkUsername()) registerUsername(this.action);else displayError();
   });
 
   function displayCorrectAnswerAndReload() {

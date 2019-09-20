@@ -10,7 +10,7 @@
         <h2>Resposta:</h2>
 
         @foreach($question->answers as $answer)
-        <a href="{{ route('check.answer', $answer->id) }}" class="check-answer">{{ $answer->title }}</a>
+        <a href="{{ route('check.answer', $answer->id) }}" class="check-answer">{{ $answer->title }}</a><br>
         @endforeach
     </div>
 @endsection

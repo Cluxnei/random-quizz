@@ -9,7 +9,16 @@ class QuestionController extends Controller
 {
     public function random()
     {
-        $question = Question::all()->random();
-        return view('question', compact('question'));
+        try{
+
+            $question = Question::all()->random();
+    
+            $questionsToWin = config('app')['correct_questions_to_win'];
+            $userScore = session()->get('user')->score;
+    
+            return view('question', compact('question', 'questionsToWin', 'userScore'));
+        }catch(\Exception $ex){
+            return redirect()->route('home');
+        }
     }
 }

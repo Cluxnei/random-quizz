@@ -5,11 +5,13 @@
 
         <h1>Home</h1>
 
-        <input type="text" id="username" placeholder="Digite seu nickname">
+        <form id="random-question" action="{{ route('random.question') }}">
+            <input type="text" id="username" placeholder="Digite seu nickname">
 
-        <a id="random-question" href="{{ route('random.question') }}">
-            Gerar Pergunta
-        </a>
+            <button type="submit">
+                Gerar Pergunta
+            </button>
+        </form>
 
     </div>
 @endsection

@@ -32,8 +32,10 @@ class UserController extends Controller
         $questionsToWin = config('app')['correct_questions_to_win'];
         $user = session()->get('user');
         $win = $user->score >= $questionsToWin;
-        if($win)
+        if($win){
+            session(['winner' => true]);
             session()->forget('user');
+        }
         return response()->json($win);
     }
 }
