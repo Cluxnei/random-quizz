@@ -22,4 +22,14 @@ class Question extends Model
     {
         return $this->answers()->correct()->first();
     }
+
+    public function getCommaCategoriesAttribute()
+    {
+        $categories = $this->categories;
+        $array = [];
+        foreach($categories as $category){
+            $array[] = $category->name;
+        }
+        return implode(', ', $array);
+    }
 }

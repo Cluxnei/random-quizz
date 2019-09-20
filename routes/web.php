@@ -15,6 +15,12 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/random/question', 'QuestionController@random')->name('random.question');
 
-Route::post('/anwer/{question}', 'AnwerController@check')->name('check.anwer');
+Route::post('/answer/{id}', 'AnwerController@check')->name('check.answer');
 
 Route::get('/success', 'HomeController@success')->name('success');
+
+Route::post('/user', 'UserController@store')->name('user.store');
+
+Route::post('/increment-score', 'UserController@increment')->name('score.increment');
+
+Route::post('/check-win', 'UserController@checkWin')->name('check.win');
