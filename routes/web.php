@@ -15,6 +15,8 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/random/question', 'QuestionController@random')->name('random.question');
 
+Route::get('/random/questions/{number}', 'QuestionController@randomQuestions')->name('random.questions');
+
 Route::post('/answer/{id}', 'AnwerController@check')->name('check.answer');
 
 Route::get('/success', 'HomeController@success')->name('success');

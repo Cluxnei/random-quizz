@@ -3,6 +3,7 @@ require('./bootstrap');
 import Swal from 'sweetalert2';
 
 $(() => {
+
     function showLoader(){
         let loader = $('#loader')
         loader.css({
@@ -48,39 +49,6 @@ $(() => {
         else
             displayError()
     })
-    function displayCorrectAnswerAndReload(){
-        axios.post('/increment-score')
-        axios.post('/check-win').then(response => {
-            if(response.data){
-                Swal.fire('Resposta Correta!', '', 'success')
-                .then(result => {
-                    window.location.href = '/success'
-                })
-            }else{
-                Swal.fire('Resposta Correta!', '', 'success')
-                .then(result => {
-                    window.location.reload()
-                })
-            }
-        })
-    }
-    function displayIncorrectAnswerAndReload(){
-        Swal.fire('Resposta Incorreta!', '', 'error')
-        .then(result => {
-            window.location.reload()
-        })
-    }
-    $('.check-answer').click(function(event){
-        event.preventDefault()
-        showLoader()
-        axios.post(this.href).then(response => {
-            hideLoader()
-            if(response.data)
-                displayCorrectAnswerAndReload()
-            else displayIncorrectAnswerAndReload()
-        }).catch(error => {
-            hideLoader()
-            console.error(error)
-        })
-    })
+
+
 })
