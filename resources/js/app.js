@@ -32,10 +32,12 @@ $(() => {
         showLoader()
         axios.post('/user', { username: $('#username').val()})
         .then(response => {
-            hideLoader()
-            if(response.data.error)
+            if(response.data.error){
+                hideLoader()
                 displayError(response.data.msg)
-            else window.location.href = redirectAfterSuccess
+            }else{
+                window.location.href = redirectAfterSuccess
+            }
         }).catch(error => {
             hideLoader()
             console.error(error)

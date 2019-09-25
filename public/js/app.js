@@ -39869,8 +39869,12 @@ $(function () {
     axios.post('/user', {
       username: $('#username').val()
     }).then(function (response) {
-      hideLoader();
-      if (response.data.error) displayError(response.data.msg);else window.location.href = redirectAfterSuccess;
+      if (response.data.error) {
+        hideLoader();
+        displayError(response.data.msg);
+      } else {
+        window.location.href = redirectAfterSuccess;
+      }
     })["catch"](function (error) {
       hideLoader();
       console.error(error);

@@ -3019,6 +3019,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
 
+
+Array.prototype.shuffle = function () {
+  return this.sort(function () {
+    return Math.random() - 0.5;
+  });
+};
+
 $(function () {
   function showLoader() {
     var loader = $('#loader');
@@ -3076,7 +3083,7 @@ $(function () {
     $('.categories').text(categories);
     var answers = question.answers.map(function (answer) {
       return "<a href=\"/answer/".concat(answer.id, "\" class=\"check-answer\">").concat(answer.title, "</a><br>");
-    }).join('');
+    }).shuffle().join('');
     $('.question-answers').html(answers);
     watchAnswerButton();
   }

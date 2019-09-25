@@ -1,5 +1,7 @@
 import Swal from 'sweetalert2';
-
+Array.prototype.shuffle = function(){
+    return this.sort(() => Math.random() - 0.5)
+}
 $(() => {
     function showLoader(){
         let loader = $('#loader')
@@ -49,7 +51,7 @@ $(() => {
         $('.categories').text(categories)
         let answers = question.answers.map(answer =>
             `<a href="/answer/${answer.id}" class="check-answer">${answer.title}</a><br>`
-        ).join('')
+        ).shuffle().join('')
         $('.question-answers').html(answers)
         watchAnswerButton()
     }
