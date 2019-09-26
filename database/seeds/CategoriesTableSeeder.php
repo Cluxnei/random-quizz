@@ -2,6 +2,7 @@
 
 use App\Category;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Carbon;
 
 class CategoriesTableSeeder extends Seeder
 {
@@ -12,6 +13,17 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Category::class, 50)->create();
+        // factory(Category::class, 50)->create();
+        $now = Carbon::now();
+        Category::insert([
+            [
+                'name' => 'Fatec&CPS',
+                'created_at' => $now
+            ],
+            [
+                'name' => 'Lógica',
+                'created_at' => $now
+            ]
+        ]);
     }
 }

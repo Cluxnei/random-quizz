@@ -21,7 +21,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="{{ (Request::route()->getName() == 'random.question') ? 'q-body-bg' : '' }}">
     <div id="loader" style="display: none;">
         @include('components.loader')
     </div>

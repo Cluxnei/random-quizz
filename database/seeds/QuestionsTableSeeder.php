@@ -16,50 +16,47 @@ class QuestionsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Question::class, 50)->create()->each(function($question){
-            $correct = [0, 0, 0, 0, 0];
-            $correct[rand(0,4)] = 1;
-            $now = CarbonCarbon::now();
-            Answer::insert([
-                [
-                    'title' => 'a - Resposta a',
-                    'correct' => $correct[0],
-                    'created_at' => $now,
-                    'question_id' => $question->id
-                ],
-                [
-                    'question_id' => $question->id,
-                    'title' => 'b - Resposta b',
-                    'correct' => $correct[1],
-                    'created_at' => $now,
-                    'question_id' => $question->id
-                ],
-                [
-                    'question_id' => $question->id,
-                    'title' => 'c - Resposta c',
-                    'correct' => $correct[2],
-                    'created_at' => $now,
-                    'question_id' => $question->id
-                ],
-                [
-                    'question_id' => $question->id,
-                    'title' => 'd - Resposta d',
-                    'correct' => $correct[3],
-                    'created_at' => $now,
-                    'question_id' => $question->id
-                ],
-                [
-                    'question_id' => $question->id,
-                    'title' => 'e - Resposta e',
-                    'correct' => $correct[4],
-                    'created_at' => $now,
-                    'question_id' => $question->id
-                ],
-            ]);
-            $categories_number = rand(1, 5);
-            while($categories_number--){
-                $question->categories()->attach(Category::all()->random()->id);
-            }
-        });
+        $fatec = Category::where('name', 'Fatec&CPS')->first()->id;
+        $logica = Category::where('name', 'Lógica')->first()->id;
+        $now = Carbon::now();
+        // Itinerator part
+        $question = Question::create([
+            'title' => 'Em que ano o Centro Paula Souza foi criado?',
+            'description' => ''
+        ]);
+        $question_id = $question->id;
+        $question->categories()->sync([$fatec]);
+        Answer::insert([
+            [
+                'title' => '1900',
+                'correct' => 0,
+                'created_at' => $now,
+                'question_id' => $question_id
+            ],
+            [
+                'title' => '2010',
+                'correct' => 0,
+                'created_at' => $now,
+                'question_id' => $question_id
+            ],
+            [
+                'title' => '1950',
+                'correct' => 0,
+                'created_at' => $now,
+                'question_id' => $question_id
+            ],
+            [
+                'title' => '1969',
+                'correct' => 1,
+                'created_at' => $now,
+                'question_id' => $question_id
+            ],
+            [
+                'title' => '1980',
+                'correct' => 0,
+                'created_at' => $now,
+                'question_id' => $question_id
+            ],
+        ]);
     }
 }

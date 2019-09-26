@@ -12372,10 +12372,43 @@ body.swal2-toast-column .swal2-toast .swal2-validation-message {
   border-bottom: solid 3px #34c4f6;
 }
 
-.bg {
+.q-body-bg {
+  background: #6362ec;
+}
+
+.q-bg {
   background-image: url("/img/question-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.q-bg-2 {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (max-width: 720px) {
+  .q-bg-2 img {
+    width: 100% !important;
+  }
+}
+
+.question-answers a {
+  display: block;
+  background-color: #6039ad;
+  margin: 8px 0;
+  border-radius: 30px;
+  color: #fff !important;
+  font-size: 1.5rem;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  transition: all 100ms linear;
+  border-bottom: solid 3px #34c4f6;
 }
 

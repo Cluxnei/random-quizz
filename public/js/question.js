@@ -3082,7 +3082,7 @@ $(function () {
     }).join(', ');
     $('.categories').text(categories);
     var answers = question.answers.map(function (answer) {
-      return "<a href=\"/answer/".concat(answer.id, "\" class=\"check-answer\">").concat(answer.title, "</a><br>");
+      return "<a href=\"/answer/".concat(answer.id, "\" class=\"check-answer\">").concat(answer.title, "</a>");
     }).shuffle().join('');
     $('.question-answers').html(answers);
     watchAnswerButton();

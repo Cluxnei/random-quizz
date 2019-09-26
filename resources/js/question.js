@@ -50,7 +50,7 @@ $(() => {
         let categories = question.categories.map(category => category.name).join(', ')
         $('.categories').text(categories)
         let answers = question.answers.map(answer =>
-            `<a href="/answer/${answer.id}" class="check-answer">${answer.title}</a><br>`
+            `<a href="/answer/${answer.id}" class="check-answer">${answer.title}</a>`
         ).shuffle().join('')
         $('.question-answers').html(answers)
         watchAnswerButton()
