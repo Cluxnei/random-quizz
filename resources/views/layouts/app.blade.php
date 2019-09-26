@@ -25,6 +25,7 @@
     <div id="loader" style="display: none;">
         @include('components.loader')
     </div>
+    @include('components.menu')
     @yield('content')
 
 </body>

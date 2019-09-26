@@ -1,30 +1,28 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="container">
 
-    <h1>Ranking</h1>
-    
-    <table class="table table-striped table-dark">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th >Nick</th>
-                <th>Score</th>
-            </tr>
-        </thead>
-        <tbody>
+        <h1>Ranking</h1>
+
+        <div class="ranking-container">
             @php
                 $counter = 1;
             @endphp
             @foreach($users as $user)
-            <tr>
-                <th scope="row">{{ $counter++ }}</th>
-                <td>{{ $user->name }}</td>
-                <td>{{ $user->score }}</td>
+            <div class="ranking-card">
+                <div class="counter">
+                   &nbsp;#{{ $counter++ }}
+                </div>
+                <div class="score">
+                    {{ $user->score }}
+                </div>
+                <div class="name">
+                    {{ $user->name }}
+                </div>
+            </div>
             </tr>
             @endforeach
-         
-        </tbody>
-      </table>
-
+        </div>
+    </div>
 @endsection
