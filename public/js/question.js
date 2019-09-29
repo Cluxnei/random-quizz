@@ -3049,7 +3049,7 @@ $(function () {
 
   var questions,
       questionIndex = 0;
-  axios.get('/random/questions/30').then(function (response) {
+  axios.get('/random/questions/5').then(function (response) {
     return questions = response.data;
   });
 
@@ -3119,7 +3119,7 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\random-quizz\resources\js\question.js */"./resources/js/question.js");
+module.exports = __webpack_require__(/*! C:\Users\Isabelle\Documents\random-quizz\resources\js\question.js */"./resources/js/question.js");
 
 
 /***/ })

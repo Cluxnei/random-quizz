@@ -12289,6 +12289,12 @@ body.swal2-toast-column .swal2-toast .swal2-validation-message {
   max-width: 50%;
 }
 
+.logo {
+  position: relative;
+  max-width: 100%;
+  width: 33%;
+}
+
 .ranking-button {
   padding: 0 30px;
   background-color: #9561e2;

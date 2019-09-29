@@ -23,7 +23,7 @@ $(() => {
     }
 
     let questions, questionIndex = 0
-    axios.get('/random/questions/30').then(response => questions = response.data)
+    axios.get('/random/questions/5').then(response => questions = response.data)
     function incrementScore(){
         let score = $('.score')
         score.text(parseInt(score.text()) + 1)
