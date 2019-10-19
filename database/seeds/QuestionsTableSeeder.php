@@ -730,6 +730,9 @@ class QuestionsTableSeeder extends Seeder
                 'correct' => 0
             ],
         ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
         $title = 'Quanto um aluno da FATEC-Sorocaba paga de mensalidade?';
         $description = '';
         $one = true;
@@ -755,6 +758,9 @@ class QuestionsTableSeeder extends Seeder
                 'correct' => 1
             ],
         ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
         $title = 'Qual o percentual de formados da FATEC-Sorocaba que consegue um emprego?';
         $description = '';
         $one = true;
@@ -780,6 +786,9 @@ class QuestionsTableSeeder extends Seeder
                 'correct' => 0
             ],
         ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
         $title = 'Das 8 edições da Maratona InterFatecs de Programação, quantas a FATEC-Sorocaba ganhou?';
         $description = '';
         $one = true;
@@ -805,6 +814,9 @@ class QuestionsTableSeeder extends Seeder
                 'correct' => 0
             ],
         ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
         $title = 'Quantos cursos da Fatec promovem 2 processos seletivos para vestibular por ano?';
         $description = '';
         $one = true;
@@ -830,6 +842,9 @@ class QuestionsTableSeeder extends Seeder
                 'correct' => 0
             ],
         ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
         $title = 'Como se chama a lendária Carpa que habita o lago da Fatec?';
         $description = '';
         $one = true;
@@ -855,6 +870,9 @@ class QuestionsTableSeeder extends Seeder
                 'correct' => 0
             ],
         ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
         $title = 'O patrono da FATEC-Sorocaba, sr José Crespo Gonzales foi ...';
         $description = '';
         $one = true;
@@ -880,6 +898,9 @@ class QuestionsTableSeeder extends Seeder
                 'correct' => 0
             ],
         ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
         $title = 'Indique qual dos itens a seguir NÃO EXISTE na FATEC-Sorocaba';
         $description = '';
         $one = true;
@@ -905,5 +926,176 @@ class QuestionsTableSeeder extends Seeder
                 'correct' => 1
             ],
         ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
+        $title = 'O Rei da Nlogônia decidiu organizar um torneio de tênis com os dez melhores jogadores do reino. Inicialmente cada jogador ganha uma moeda de ouro. Os jogadores decidem entre si a ordem dos jogos e quem joga contra quem. Ao final de cada partida, o vencedor ganha todas as moedas de ouro do adversário, e mais três novas moedas de ouro. O jogador que perde é eliminado do torneio. O torneio continua até restar apenas um jogador, que é o campeão do torneio. Quantas moedas de ouro ganha o campeão do torneio?';
+        $description = 'OBI 2015 f1n2 q3';
+        $one = false;
+        $titles = [
+            (object)[
+                'title' => '13',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => '27',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => '30',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => '37',
+                'correct' => 1
+            ],
+            (object)[
+                'title' => '40',
+                'correct' => 0
+            ],
+        ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
+        $title = 'Um palíndrome é um número inteiro positivo, sem zeros à esquerda, que é o mesmo se lido da esquerda para a direita ou da direita para a esquerda. Por exemplo, os números 11 e 65256 são palíndromes, mas os números 010 e 123 não são. A diferença entre o valor do maior palíndrome de três dígitos e o menor palíndrome de três dígitos é:';
+        $description = 'OBI 2015 f1n2 q6';
+        $one = false;
+        $titles = [
+            (object)[
+                'title' => '898',
+                'correct' => 1
+            ],
+            (object)[
+                'title' => '888',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => '989',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => '998',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => '979',
+                'correct' => 0
+            ],
+        ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
+        $title = 'André tem uma caixa com 10 lâmpadas. Ele lembra que 7 lâmpadas estão funcionando e 3 lâmpadas estão queimadas, mas ele não sabe quais são as lâmpadas que estão funcionando. Ele precisa de uma lâmpada e irá testar algumas lâmpadas da caixa até que uma delas funcione. Qual é o número máximo de testes que ele irá realizar?';
+        $description = 'OBI 2015 f1n2 q7';
+        $one = false;
+        $titles = [
+            (object)[
+                'title' => '3 testes',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => '4 testes',
+                'correct' => 1
+            ],
+            (object)[
+                'title' => '5 testes',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => '7 testes',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => '10 testes',
+                'correct' => 0
+            ],
+        ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
+        $title = 'Para comemorar o aniversário de Cláudio, ele e mais quatro amigos – Alberto, Beto, Dino e Eurico – foram almoçar juntos no restaurante da escola. As mesas são redondas e acomodam exatamente cinco pessoas. Cláudio e Dino sentam-se um ao lado do outro. Alberto e Beto não sentam-se um ao lado do outro. Os dois amigos sentados ao lado de Eurico são:';
+        $description = 'OBI 2015 f1n1 q1';
+        $one = false;
+        $titles = [
+            (object)[
+                'title' => 'Alberto e Beto',
+                'correct' => 1
+            ],
+            (object)[
+                'title' => 'Cláudio e Dino',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => 'Dino e Beto',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => 'Cláudio e Alberto',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => 'Alberto e Dino',
+                'correct' => 0
+            ],
+        ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
+        $title = 'Uma equipe de meninas está participando de uma gincana preparada pelos professores da escola. Depois de muitas peripécias, elas finalmente encontraram o cofre escondido que contém a última tarefa a ser resolvida. Mas o cofre está protegido com um cadeado digital que é aberto somente se uma senha de quatro letras for digitada. Junto ao cofre elas encontraram também um pedaço de papel com as letras Xkzk. Inicialmente elas pensaram que essa era a senha, mas o cofre não abriu. No entanto, elas tinham certeza de que as quatro letras encontradas eram a chave para o enigma. Depois de pensar um pouco elas perceberam que os nomes das cinco meninas da equipe tinham exatamente quatro letras. Seria essa a ligação com as letras encontradas? Não demorou muito para elas abrirem o cofre, pois a senha era mesmo o nome de uma das meninas. Qual era a senha do cofre?';
+        $description = 'OBI 2015 f1n1 q2';
+        $one = false;
+        $titles = [
+            (object)[
+                'title' => 'Anna',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => 'Lisa',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => 'Nina',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => 'Iris',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => 'Nara',
+                'correct' => 1
+            ],
+        ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
+        $title = 'Na Nlogônia, as cédulas de dinheiro são de $1,00, $3,00, $9,00, $27,00, e $81,00. Num dado momento, um vendedor possui apenas cinco cédulas, uma de cada um dos valores das cédulas existentes na Nlogônia. Qual dos valores abaixo não é possível ser dado como troco por esse vendedor?';
+        $description = '';
+        $one = false;
+        $titles = [
+            (object)[
+                'title' => '$ 40,00',
+                'correct' => 1
+            ],
+            (object)[
+                'title' => '$ 35,00',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => '$ 31,00',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => '$ 13,00',
+                'correct' => 0
+            ],
+            (object)[
+                'title' => '$ 4,00',
+                'correct' => 0
+            ],
+        ];
+        $this->createAnswer(
+            $title, $description, $one, $titles
+        );
     }
 }
