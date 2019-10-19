@@ -3048,7 +3048,8 @@ $(function () {
   }
 
   var questions,
-      questionIndex = 0;
+      questionIndex = 0,
+      tryies = 0;
   axios.get('/random/questions/5').then(function (response) {
     return questions = response.data;
   });
@@ -3090,6 +3091,7 @@ $(function () {
 
   function displayIncorrectAnswerAndReload() {
     sweetalert2__WEBPACK_IMPORTED_MODULE_0___default.a.fire('Resposta Incorreta!', '', 'error');
+    if (tryies > 1) window.location.href = '/game-over';else tryies++;
     reloadAnswer();
   }
 

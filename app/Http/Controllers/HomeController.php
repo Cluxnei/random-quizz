@@ -22,9 +22,12 @@ class HomeController extends Controller
         if(session()->has('winner') && session()->get('winner') == true){
             session(['winner' => false]);
             return view('success');
-        }
-        else{
+        }else{
             return redirect()->route('random.question');
         }
+    }
+
+    public function gameover(){
+        return view('gameover');
     }
 }

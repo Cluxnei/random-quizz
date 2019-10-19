@@ -15,7 +15,7 @@
                 <a href="{{ route('check.answer', $answer->id) }}" class="check-answer">{{ $answer->title }}</a>
                 @endforeach
             </div>
-            <strong><span class="score">{{ (string) $userScore ?: '0' }}</span> correta(s) / <span> 5 total ({{ $questionsToWin }}</span> para ganhar)</strong>
+            <strong><span class="score">{{ (string) $userScore ?: '0' }}</span> correta(s) / <span> 3 total ({{ $questionsToWin }}</span> para ganhar)</strong>
         </div>
         <hr>
     </div>

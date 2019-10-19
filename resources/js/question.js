@@ -22,7 +22,7 @@ $(() => {
         }, 500);
     }
 
-    let questions, questionIndex = 0
+    let questions, questionIndex = 0, tryies = 0
     axios.get('/random/questions/5').then(response => questions = response.data)
     function incrementScore(){
         let score = $('.score')
@@ -57,6 +57,9 @@ $(() => {
     }
     function displayIncorrectAnswerAndReload(){
         Swal.fire('Resposta Incorreta!', '', 'error')
+        if(tryies > 1)
+            window.location.href = '/game-over'
+        else tryies++;
         reloadAnswer()
     }
     function watchAnswerButton(){

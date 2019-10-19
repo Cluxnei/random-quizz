@@ -180,3 +180,29 @@
         }
     }
 }
+.success img{
+    position: absolute;
+    margin: 0 auto;
+    max-height: 100vh;
+    display: block;
+    left: 0;
+    right: 0;
+    top: -10vh;
+    z-index: -1;
+}
+.over img{
+    position: absolute;
+    margin: 0 auto;
+    max-height: 100vh;
+    display: block;
+    left: 0;
+    right: 0;
+    top: -2vh;
+    z-index: -1;
+}
+.rk h1{
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}

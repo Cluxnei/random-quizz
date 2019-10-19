@@ -1,11 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container success">
 
-        <h1>Parabens</h1>
-
-        <h2>Você ganhou</h2>
+        <img src="{{ asset('img/parabens.png') }}" alt="Parabéns, você ganhou!">
 
     </div>
 @endsection

@@ -2,7 +2,7 @@
 
 return [
 
-    'correct_questions_to_win' => env('CORRECT_QUESTIONS_TO_WIN', 5),
+    'correct_questions_to_win' => env('CORRECT_QUESTIONS_TO_WIN', 2),
 
     /*
     |--------------------------------------------------------------------------

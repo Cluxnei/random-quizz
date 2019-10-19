@@ -21,6 +21,8 @@ Route::post('/answer/{id}', 'AnwerController@check')->name('check.answer');
 
 Route::get('/success', 'HomeController@success')->name('success');
 
+Route::get('/game-over', 'HomeController@gameover')->name('game.over');
+
 Route::post('/user', 'UserController@store')->name('user.store');
 
 Route::post('/increment-score', 'UserController@increment')->name('score.increment');
